@@ -68,10 +68,10 @@ public class SampleAction {
         // select the greeting massage according to the time
         Calendar calendar = Calendar.getInstance();
         int hour = calendar.get(Calendar.HOUR_OF_DAY);
-        if ( hour < 12 ) {
-            dto.setMassege("Good morning");
+        if (hour < 12) {
+            dto.setMessage("Good morning");
         } else {
-            dto.setMassege("Good afternoon");
+            dto.setMessage("Good afternoon");
         }
 
         HttpSession session = request.getSession(true);
