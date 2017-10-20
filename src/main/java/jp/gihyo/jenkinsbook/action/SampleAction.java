@@ -65,15 +65,15 @@ public class SampleAction {
     public final String execute(final HttpServletRequest request) {
         SampleDTO dto = new SampleDTO(firstName, lastName);
 
-    	// select the greeting massage according to the time
-    	Calendar calendar = Calendar.getInstance();
-    	int hour = calendar.get(Calendar.HOUR_OF_DAY);
-    	if(hour < 12) {
-    		dto.setMassege("Good morning");
-    	} else {
-    		dto.setMassege("Good afternoon");
-    	}
-    	
+        // select the greeting massage according to the time
+        Calendar calendar = Calendar.getInstance();
+        int hour = calendar.get(Calendar.HOUR_OF_DAY);
+        if( hour < 12 ) {
+            dto.setMassege("Good morning");
+        } else {
+            dto.setMassege("Good afternoon");
+        }
+
         HttpSession session = request.getSession(true);
         session.setAttribute("dto", dto);
 
